@@ -13,8 +13,7 @@ RUN go mod download
 
 RUN go build -o /root/app
 # Run app in scratch
-#FROM chromedp/headless-shell
+FROM chromedp/headless-shell
 
-#COPY --from=build-env /root/app /
-WORKDIR $GOPATH/bin
-CMD ["/root/app"]
+COPY --from=build-env /root/app /
+CMD ["/app"]
