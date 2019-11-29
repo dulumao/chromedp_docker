@@ -7,4 +7,8 @@ run(){
   docker-compose up
 }
 
+runl(){
+  go run main.go
+}
+
 "$@"
