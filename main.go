@@ -9,6 +9,7 @@ import (
 )
 
 func main() {
+	log.Println("app is running")
 	log.SetFlags(log.LstdFlags | log.Llongfile)
 	ctx, cancel := chromedp.NewContext(
 		context.Background(),
